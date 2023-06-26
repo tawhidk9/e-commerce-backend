@@ -48,6 +48,8 @@ router.put("/:id", async (req, res) => {
         where: {
           id: req.params.id,
         },
+        returning: ['*'],
+        plain: true,
       }
     );
     res.status(200).json(updatedTag);
@@ -59,11 +61,13 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", (req, res) => {
   // delete on tag by its `id` value
   try {
-    const deletedTag = Tag.destroy({ where: { id: req.params.id } });
+    const deletedTag = Tag.destroy({ where: { id: req.params.id },
+    returning: true,
+    });
     if (!deletedTag) {
       res.status(400).json({ message: "No tag with this id!" });
     }
-    res.status(200).json(deletedTag);
+    res.status(200).json({message: 'Successfully Deleted'});
   } catch (error) {
     res.status(500).json(error);
   }
