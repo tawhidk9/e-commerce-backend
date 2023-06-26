@@ -33,3 +33,6 @@
   Questions/Concerns/Etc: [tawhidkamal5@gmail.com](mailto:tawhidkamal5@gmail.com)
   
   More of my work:: [tawhidk9](https://www.github.com/tawhidk9)
+
+  ### Video Walkthrough 
+  https://watch.screencastify.com/v/aVQt72aAi8jV7jb5sQ2E
