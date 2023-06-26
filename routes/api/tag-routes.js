@@ -52,7 +52,7 @@ router.put("/:id", async (req, res) => {
         plain: true,
       }
     );
-    res.status(200).json(updatedTag);
+    res.status(200).json({updatedTag});
   } catch (error) {
     res.status(500).json(error);
   }
